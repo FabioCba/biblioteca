@@ -1,0 +1,12 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the  and  formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the Autoridades_init() hook (in hooks/Autoridades.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="Autoridades-Foto-<%%VALUE(id)%%>" class="Autoridades-Foto"><a href="<%%BASE_UPLOAD_PATH%%><%%VALUE(Foto)%%>" data-lightbox="Autoridades-Foto"><img src="thumbnail.php?i=<%%VALUE(Foto)%%>&t=Autoridades&f=Foto&v=tv" class="img-thumbnail"></a></td>
+		<td id="Autoridades-id_Tipo_autoridad-<%%VALUE(id)%%>" class="Autoridades-id_Tipo_autoridad"><%%VALUE(id_Tipo_autoridad)%%></td>
+		<td id="Autoridades-Nombre-<%%VALUE(id)%%>" class="Autoridades-Nombre"><%%VALUE(Nombre)%%></td>
+		<td id="Autoridades-Fecha_Extrema-<%%VALUE(id)%%>" class="Autoridades-Fecha_Extrema"><%%VALUE(Fecha_Extrema)%%></td>
+		<td id="Autoridades-Vease_Ademas-<%%VALUE(id)%%>" class="Autoridades-Vease_Ademas"><%%VALUE(Vease_Ademas)%%></td>

@@ -1,0 +1,230 @@
+<!-- Edit this file to change the layout of the detail view print preview page -->
+
+
+<div class="panel-heading"><h3 class="panel-title">
+	<strong><%%DETAIL_VIEW_TITLE%%></strong>
+	<div class="hidden-print pull-right">
+		<div class="btn-group">
+			<button type="button" id="print" onclick="window.print();" title="<%%TRANSLATION(Print)%%>" class="btn btn-primary"><i class="glyphicon glyphicon-print"></i> <%%TRANSLATION(Print)%%></button>
+			<button type="submit" id="back" title="<%%TRANSLATION(Cancel Printing)%%>" class="btn btn-default"><i class="glyphicon glyphicon-remove-circle"></i> <%%TRANSLATION(Cancel Printing)%%></button>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+</h3></div>
+
+<div class="panel-body">
+	<fieldset class="form-horizontal">
+		<!-- Field: ID -->
+		<div class="form-group Catalogo-id" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">ID</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(id)%%></div>
+			</div>
+		</div>
+		<!-- Field: Portada -->
+		<div class="form-group Catalogo-Portada" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Portada</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><script>
+				var PortadaSrc1<%%RND1%%>='<%%BASE_UPLOAD_PATH%%><%%VALUE(Portada)%%>';
+				var PortadaSrc2<%%RND1%%>='thumbnail.php?t=Catalogo&f=Portada&i=<%%VALUE(Portada)%%>&v=dv'
+			</script>
+			<a href="#" onclick="$j('#PortadaImg<%%RND1%%>').attr('src', ($j('#PortadaImg<%%RND1%%>').attr('src').search(/thumbnail\.php/) != -1 && PortadaSrc1<%%RND1%%> != '<%%BASE_UPLOAD_PATH%%>' ? PortadaSrc1<%%RND1%%> : PortadaSrc2<%%RND1%%>)); return false;"><img id="PortadaImg<%%RND1%%>" src="thumbnail.php?t=Catalogo&f=Portada&i=<%%VALUE(Portada)%%>&v=dv" class="img-thumbnail"></a></div>
+			</div>
+		</div>
+		<!-- Field: Codigo Registro -->
+		<div class="form-group Catalogo-Codigo_Registro" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Codigo Registro</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="Codigo_Registro<%%RND1%%>"><%%COMBOTEXT(Codigo_Registro)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: C&#243;digo de  Barras -->
+		<div class="form-group Catalogo-Cod_Barras" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">C&#243;digo de  Barras</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="Cod_Barras<%%RND1%%>"></span></div>
+			</div>
+		</div>
+		<!-- Field: Item -->
+		<div class="form-group Catalogo-Item" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Item</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(Item)%%></div>
+			</div>
+		</div>
+		<!-- Field: Cod Ejemplar -->
+		<div class="form-group Catalogo-Cod_Ejemplar" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Cod Ejemplar</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(Cod_Ejemplar)%%></div>
+			</div>
+		</div>
+		<!-- Field: Tipo de Literatura -->
+		<div class="form-group Catalogo-Tipo_Literatura" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Tipo de Literatura</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%COMBOTEXT(Tipo_Literatura)%%></div>
+			</div>
+		</div>
+		<!-- Field: Tipo de Documento -->
+		<div class="form-group Catalogo-Tipo_Documento" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Tipo de Documento</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="Tipo_Documento<%%RND1%%>"><%%COMBOTEXT(Tipo_Documento)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Estado de Catalogacion -->
+		<div class="form-group Catalogo-id_Estado_Catalogacion" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Estado de Catalogacion</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="id_Estado_Catalogacion<%%RND1%%>"><%%COMBOTEXT(id_Estado_Catalogacion)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Signatura Topografica -->
+		<div class="form-group Catalogo-Signatura_Topografica" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Signatura Topografica</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(Signatura_Topografica)%%></div>
+			</div>
+		</div>
+		<!-- Field: Autor -->
+		<div class="form-group Catalogo-Id_Autoridad" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Autor</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="Id_Autoridad<%%RND1%%>"><%%COMBOTEXT(Id_Autoridad)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Titulo -->
+		<div class="form-group Catalogo-Titulo" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Titulo</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(Titulo)%%></div>
+			</div>
+		</div>
+		<!-- Field: Responsabilidades -->
+		<div class="form-group Catalogo-Responsabilidades" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Responsabilidades</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(Responsabilidades)%%></div>
+			</div>
+		</div>
+		<!-- Field: Edicion -->
+		<div class="form-group Catalogo-Edicion" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Edicion</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(Edicion)%%></div>
+			</div>
+		</div>
+		<!-- Field: Lugar de Publicaci&#243;n -->
+		<div class="form-group Catalogo-Id_Lugar" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Lugar de Publicaci&#243;n</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="Id_Lugar<%%RND1%%>"><%%COMBOTEXT(Id_Lugar)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Editorial -->
+		<div class="form-group Catalogo-id_Editorial" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Editorial</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="id_Editorial<%%RND1%%>"><%%COMBOTEXT(id_Editorial)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Fecha de Publicacion -->
+		<div class="form-group Catalogo-Fecha_Publicacion" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Fecha de Publicacion</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(Fecha_Publicacion)%%></div>
+			</div>
+		</div>
+		<!-- Field: Descripci&#243;n Fisica -->
+		<div class="form-group Catalogo-Desc_Fisica" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Descripci&#243;n Fisica</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(Desc_Fisica)%%></div>
+			</div>
+		</div>
+		<!-- Field: Notas -->
+		<div class="form-group Catalogo-Notas" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Notas</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(Notas)%%></div>
+			</div>
+		</div>
+		<!-- Field: Materia 1 -->
+		<div class="form-group Catalogo-Materia_1" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Materia 1</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="Materia_1<%%RND1%%>"><%%COMBOTEXT(Materia_1)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Materia 2 -->
+		<div class="form-group Catalogo-Materia_2" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Materia 2</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="Materia_2<%%RND1%%>"><%%COMBOTEXT(Materia_2)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Materia 3 -->
+		<div class="form-group Catalogo-Materia_3" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Materia 3</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="Materia_3<%%RND1%%>"><%%COMBOTEXT(Materia_3)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Ejemplares -->
+		<div class="form-group Catalogo-Ejemplares" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Ejemplares</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(Ejemplares)%%></div>
+			</div>
+		</div>
+		<!-- Field: Fecha de Catalogaci&#243;n -->
+		<div class="form-group Catalogo-Fecha_Catalogacion" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Fecha de Catalogaci&#243;n</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%COMBOTEXT(Fecha_Catalogacion)%%></div>
+			</div>
+		</div>
+	</fieldset>
+</div>
+<script>
+	$j(function() {
+		// render read-only checkboxes in DVP
+		$j('form input[type=checkbox]:not(.hidden):checked')
+			.addClass('hidden')
+			.after('<i class="glyphicon glyphicon-check"></i>');
+		$j('form input[type=checkbox]:not(.hidden):not(:checked)')
+			.addClass('hidden')
+			.after('<i class="glyphicon glyphicon-unchecked"></i>')
+	})
+</script>
+<!-- child records -->
+<div class="panel-body">
+	<div id="Catalogo-children"></div>
+</div>
+
+<script>
+	$j(function() {
+		/* prevent loading child records in multiple DVP */
+		if($j('[id=Catalogo-children]').length > 1) return;
+
+		post(
+			'parent-children.php', {
+				ParentTable: 'Catalogo',
+				SelectedID: '<%%VALUE(id)%%>',
+				Operation: 'show-children-printable'
+			},
+			'Catalogo-children',
+			'disable-element',
+			'loading-element',
+			apply_persisting_children
+		);
+
+		$j('form').on('click', '#children-tabs button[data-target]', function() {
+			$j(this).toggleClass('active');
+			persist_expanded_child($j(this).attr('id'));
+		});
+	})
+</script>
+

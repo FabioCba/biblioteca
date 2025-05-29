@@ -1,0 +1,141 @@
+<!-- Edit this file to change the layout of the detail view print preview page -->
+
+
+<div class="panel-heading"><h3 class="panel-title">
+	<strong><%%DETAIL_VIEW_TITLE%%></strong>
+	<div class="hidden-print pull-right">
+		<div class="btn-group">
+			<button type="button" id="print" onclick="window.print();" title="<%%TRANSLATION(Print)%%>" class="btn btn-primary"><i class="glyphicon glyphicon-print"></i> <%%TRANSLATION(Print)%%></button>
+			<button type="submit" id="back" title="<%%TRANSLATION(Cancel Printing)%%>" class="btn btn-default"><i class="glyphicon glyphicon-remove-circle"></i> <%%TRANSLATION(Cancel Printing)%%></button>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+</h3></div>
+
+<div class="panel-body">
+	<fieldset class="form-horizontal">
+		<!-- Field: ID -->
+		<div class="form-group Circulacion-id" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">ID</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(id)%%></div>
+			</div>
+		</div>
+		<!-- Field: Usuario -->
+		<div class="form-group Circulacion-id_Usuario" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Usuario</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="id_Usuario<%%RND1%%>"><%%COMBOTEXT(id_Usuario)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Foto Usuario -->
+		<div class="form-group Circulacion-Foto_Usuario" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Foto Usuario</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="Foto_Usuario<%%RND1%%>"></span></div>
+			</div>
+		</div>
+		<!-- Field: Tipo de Usuario -->
+		<div class="form-group Circulacion-id_Tipo_usuario" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Tipo de Usuario</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="id_Tipo_usuario<%%RND1%%>"><%%COMBOTEXT(id_Tipo_usuario)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Politica de pretamo -->
+		<div class="form-group Circulacion-id_Politica_pretamo" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Politica de pretamo</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="id_Politica_pretamo<%%RND1%%>"><%%COMBOTEXT(id_Politica_pretamo)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Tipo de documento -->
+		<div class="form-group Circulacion-id_Tipo_documento" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Tipo de documento</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="id_Tipo_documento<%%RND1%%>"><%%COMBOTEXT(id_Tipo_documento)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Registro -->
+		<div class="form-group Circulacion-id_Registro" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Registro</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="id_Registro<%%RND1%%>"></span></div>
+			</div>
+		</div>
+		<!-- Field: Libro Prestado -->
+		<div class="form-group Circulacion-Libro_Prestado" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Libro Prestado</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="Libro_Prestado<%%RND1%%>"><%%COMBOTEXT(Libro_Prestado)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Portada del Libro -->
+		<div class="form-group Circulacion-Portada_libro" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Portada del Libro</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="Portada_libro<%%RND1%%>"></span></div>
+			</div>
+		</div>
+		<!-- Field: Fecha de Prestamo -->
+		<div class="form-group Circulacion-Fecha_Prestamo" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Fecha de Prestamo</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%COMBOTEXT(Fecha_Prestamo)%%></div>
+			</div>
+		</div>
+		<!-- Field: Fecha de Devoluci&#243;n -->
+		<div class="form-group Circulacion-Fecha_Devolucion" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Fecha de Devoluci&#243;n</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%COMBOTEXT(Fecha_Devolucion)%%></div>
+			</div>
+		</div>
+		<!-- Field: Estado de Prestamo -->
+		<div class="form-group Circulacion-id_Estado_prestamo" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Estado de Prestamo</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="id_Estado_prestamo<%%RND1%%>"><%%COMBOTEXT(id_Estado_prestamo)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Cantidad -->
+		<div class="form-group Circulacion-Cantidad" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Cantidad</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(Cantidad)%%></div>
+			</div>
+		</div>
+		<!-- Field: Ejemplares Disponibles -->
+		<div class="form-group Circulacion-Ejemp_Disponibles" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Ejemplares Disponibles</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="Ejemp_Disponibles<%%RND1%%>"></span></div>
+			</div>
+		</div>
+		<!-- Field: Item -->
+		<div class="form-group Circulacion-Item" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Item</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="Item<%%RND1%%>"></span></div>
+			</div>
+		</div>
+		<!-- Field: Cod Ejemplar -->
+		<div class="form-group Circulacion-Cod_Ejemplar" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Cod Ejemplar</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="Cod_Ejemplar<%%RND1%%>"><%%COMBOTEXT(Cod_Ejemplar)%%></span></div>
+			</div>
+		</div>
+	</fieldset>
+</div>
+<script>
+	$j(function() {
+		// render read-only checkboxes in DVP
+		$j('form input[type=checkbox]:not(.hidden):checked')
+			.addClass('hidden')
+			.after('<i class="glyphicon glyphicon-check"></i>');
+		$j('form input[type=checkbox]:not(.hidden):not(:checked)')
+			.addClass('hidden')
+			.after('<i class="glyphicon glyphicon-unchecked"></i>')
+	})
+</script>

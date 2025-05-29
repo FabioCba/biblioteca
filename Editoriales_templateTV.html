@@ -1,0 +1,12 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the <%%SELECT%%> and <%%ENDSELECT%%> formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the Editoriales_init() hook (in hooks/Editoriales.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="Editoriales-Nombre-<%%VALUE(id)%%>" class="Editoriales-Nombre"><%%SELECT%%><%%VALUE(Nombre)%%><%%ENDSELECT%%></td>
+		<td id="Editoriales-Direccion-<%%VALUE(id)%%>" class="Editoriales-Direccion"><%%SELECT%%><%%VALUE(Direccion)%%><%%ENDSELECT%%></td>
+		<td id="Editoriales-Telefono-<%%VALUE(id)%%>" class="Editoriales-Telefono"><%%SELECT%%><%%VALUE(Telefono)%%><%%ENDSELECT%%></td>
+		<td id="Editoriales-Correo-<%%VALUE(id)%%>" class="Editoriales-Correo"><a href="mailto:<%%VALUE(Correo)%%>"><%%VALUE(Correo)%%></a></td>
+		<td id="Editoriales-Contacto-<%%VALUE(id)%%>" class="Editoriales-Contacto"><%%SELECT%%><%%VALUE(Contacto)%%><%%ENDSELECT%%></td>

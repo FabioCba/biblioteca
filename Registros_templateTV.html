@@ -1,0 +1,12 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the <%%SELECT%%> and <%%ENDSELECT%%> formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the Registros_init() hook (in hooks/Registros.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="Registros-Codigo_de_Registro-<%%VALUE(id)%%>" class="Registros-Codigo_de_Registro"><%%SELECT%%><%%VALUE(Codigo_de_Registro)%%><%%ENDSELECT%%></td>
+		<td id="Registros-Codigo_Barras-<%%VALUE(id)%%>" class="Registros-Codigo_Barras"><%%SELECT%%><%%VALUE(Codigo_Barras)%%><%%ENDSELECT%%></td>
+		<td id="Registros-id_Estado_Conservacion-<%%VALUE(id)%%>" class="Registros-id_Estado_Conservacion"><%%SELECT%%><%%VALUE(id_Estado_Conservacion)%%><%%ENDSELECT%%></td>
+		<td id="Registros-id_Estado_Prestable-<%%VALUE(id)%%>" class="Registros-id_Estado_Prestable"><%%SELECT%%><%%VALUE(id_Estado_Prestable)%%><%%ENDSELECT%%></td>
+		<td id="Registros-Fecha_Regsitro-<%%VALUE(id)%%>" class="Registros-Fecha_Regsitro"><%%SELECT%%><%%VALUE(Fecha_Regsitro)%%><%%ENDSELECT%%></td>

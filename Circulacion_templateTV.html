@@ -1,0 +1,22 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the <%%SELECT%%> and <%%ENDSELECT%%> formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the Circulacion_init() hook (in hooks/Circulacion.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="Circulacion-id_Usuario-<%%VALUE(id)%%>" class="Circulacion-id_Usuario"><%%SELECT%%><%%VALUE(id_Usuario)%%><%%ENDSELECT%%></td>
+		<td id="Circulacion-Foto_Usuario-<%%VALUE(id)%%>" class="Circulacion-Foto_Usuario"><a href="<%%BASE_UPLOAD_PATH%%><%%VALUE(Foto_Usuario)%%>" data-lightbox="Circulacion-Foto_Usuario"><img src="thumbnail.php?i=<%%VALUE(Foto_Usuario)%%>&t=Usuarios&f=Foto&v=tv" class="img-thumbnail"></a></td>
+		<td id="Circulacion-id_Tipo_usuario-<%%VALUE(id)%%>" class="Circulacion-id_Tipo_usuario"><%%SELECT%%><%%VALUE(id_Tipo_usuario)%%><%%ENDSELECT%%></td>
+		<td id="Circulacion-id_Politica_pretamo-<%%VALUE(id)%%>" class="Circulacion-id_Politica_pretamo"><%%SELECT%%><%%VALUE(id_Politica_pretamo)%%><%%ENDSELECT%%></td>
+		<td id="Circulacion-id_Tipo_documento-<%%VALUE(id)%%>" class="Circulacion-id_Tipo_documento"><%%SELECT%%><%%VALUE(id_Tipo_documento)%%><%%ENDSELECT%%></td>
+		<td id="Circulacion-id_Registro-<%%VALUE(id)%%>" class="Circulacion-id_Registro"><%%SELECT%%><%%VALUE(id_Registro)%%><%%ENDSELECT%%></td>
+		<td id="Circulacion-Libro_Prestado-<%%VALUE(id)%%>" class="Circulacion-Libro_Prestado"><%%SELECT%%><%%VALUE(Libro_Prestado)%%><%%ENDSELECT%%></td>
+		<td id="Circulacion-Portada_libro-<%%VALUE(id)%%>" class="Circulacion-Portada_libro"><a href="<%%BASE_UPLOAD_PATH%%><%%VALUE(Portada_libro)%%>" data-lightbox="Circulacion-Portada_libro"><img src="thumbnail.php?i=<%%VALUE(Portada_libro)%%>&t=Catalogo&f=Portada&v=tv" class="img-thumbnail"></a></td>
+		<td id="Circulacion-Fecha_Prestamo-<%%VALUE(id)%%>" class="Circulacion-Fecha_Prestamo"><%%SELECT%%><%%VALUE(Fecha_Prestamo)%%><%%ENDSELECT%%></td>
+		<td id="Circulacion-Fecha_Devolucion-<%%VALUE(id)%%>" class="Circulacion-Fecha_Devolucion"><%%SELECT%%><%%VALUE(Fecha_Devolucion)%%><%%ENDSELECT%%></td>
+		<td id="Circulacion-id_Estado_prestamo-<%%VALUE(id)%%>" class="Circulacion-id_Estado_prestamo"><%%SELECT%%><%%VALUE(id_Estado_prestamo)%%><%%ENDSELECT%%></td>
+		<td id="Circulacion-Cantidad-<%%VALUE(id)%%>" class="Circulacion-Cantidad text-right"><%%SELECT%%><%%VALUE(Cantidad)%%><%%ENDSELECT%%></td>
+		<td id="Circulacion-Ejemp_Disponibles-<%%VALUE(id)%%>" class="Circulacion-Ejemp_Disponibles text-right"><%%SELECT%%><%%VALUE(Ejemp_Disponibles)%%><%%ENDSELECT%%></td>
+		<td id="Circulacion-Item-<%%VALUE(id)%%>" class="Circulacion-Item"><%%SELECT%%><%%VALUE(Item)%%><%%ENDSELECT%%></td>
+		<td id="Circulacion-Cod_Ejemplar-<%%VALUE(id)%%>" class="Circulacion-Cod_Ejemplar"><%%SELECT%%><%%VALUE(Cod_Ejemplar)%%><%%ENDSELECT%%></td>
